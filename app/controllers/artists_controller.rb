@@ -1,5 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-      @consulta = Track.all
+      @artista = Artist.all
+      
   end
 end

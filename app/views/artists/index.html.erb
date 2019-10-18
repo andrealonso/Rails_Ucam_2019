@@ -1,5 +1,13 @@
-<h3> Desenvolvimento Web 2 </h3>
+<h3> Página principal </h3>
 
-<p> O Conteúdo da Variável Consulta Será Exibido Abaixo: </p>
-
-<%= @consulta.try(:inspect) %>
+<ul>
+<% for i in 0..@artista.size-1 do %>
+    <li><%= @artista[i].name %>
+    <ul>
+        <% @artista[i].albums.each do |alb|%>
+                <li><%= alb.title %> </li>
+        <% end %>
+        </ul>    
+    </li>
+<% end %>
+</ul>
